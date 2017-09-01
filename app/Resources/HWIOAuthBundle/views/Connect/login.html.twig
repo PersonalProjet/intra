@@ -1,0 +1,16 @@
+{% extends 'HWIOAuthBundle::layout.html.twig' %}
+
+{% block hwi_oauth_content %}
+    {% if error is defined and error %}
+        <div>{{ error }}</div>
+    {% endif %}
+    {% for owner in hwi_oauth_resource_owners() %}
+        {% if owner == 'facebook' %}
+                  <a href="{{ hwi_oauth_login_url(owner) }}" class="btn btn-social bg-yellow">
+                    <i class="fa fa-facebook"></i> Se connecter avec Facebook
+                  </a>
+        {% else %}
+            <a href="{{ hwi_oauth_login_url(owner) }}">{{ owner | trans({}, 'HWIOAuthBundle') }}</a> <br />
+        {% endif %}
+    {% endfor %}
+{% endblock hwi_oauth_content %}

@@ -1,3 +1,29 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+# Bundle Application
+core_user:
+    resource: "@CoreUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app_banque:
+    resource: "@AppBanqueBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+# Bundle de connexion
+hwi_oauth_security:
+    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
+    prefix: /login
+
+hwi_oauth_connect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
+    prefix: /login
+
+hwi_oauth_redirect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
+    prefix:   /login
+
+facebook_login:
+    path: /login/check-facebook
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
