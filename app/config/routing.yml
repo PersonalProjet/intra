@@ -1,3 +1,7 @@
+app_banque_banque:
+    resource: "@AppBanqueBundle/Controller/BanqueController.php"
+    type:     annotation
+
 # Bundle Application
 core_user:
     resource: "@CoreUserBundle/Controller/"

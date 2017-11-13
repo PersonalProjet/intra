@@ -43,7 +43,7 @@ class User extends BaseUser
     /**
      * @var Banque
      *
-     * @ORM\ManyToMany(targetEntity="\App\BanqueBundle\Entity\Banque")
+     * @ORM\ManyToMany(targetEntity="User")
      * @ORM\JoinTable(name="user_banque",
      *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="banque_id", referencedColumnName="id")}
@@ -54,7 +54,7 @@ class User extends BaseUser
     /**
      * @param int $id
      */
-    public function setId($id)
+    public function setId(int $id)
     {
         $this->id = $id;
     }
@@ -62,7 +62,7 @@ class User extends BaseUser
     /**
      * @return string
      */
-    public function getFacebookID()
+    public function getFacebookID(): string
     {
         return $this->facebookID;
     }
@@ -70,7 +70,7 @@ class User extends BaseUser
     /**
      * @param string $facebookID
      */
-    public function setFacebookID($facebookID)
+    public function setFacebookID(string $facebookID)
     {
         $this->facebookID = $facebookID;
     }
@@ -94,7 +94,7 @@ class User extends BaseUser
     /**
      * @return string
      */
-    public function getPicture()
+    public function getPicture(): string
     {
         return $this->picture;
     }
@@ -102,7 +102,7 @@ class User extends BaseUser
     /**
      * @param string $picture
      */
-    public function setPicture($picture)
+    public function setPicture(string $picture)
     {
         $this->picture = $picture;
     }
@@ -165,39 +165,5 @@ class User extends BaseUser
     public function isEnabled()
     {
         return true;
-    }
-
-    /**
-     * Add banque
-     *
-     * @param \Core\UserBundle\Entity\User $banque
-     *
-     * @return User
-     */
-    public function addBanque(\Core\UserBundle\Entity\User $banque)
-    {
-        $this->banque[] = $banque;
-
-        return $this;
-    }
-
-    /**
-     * Remove banque
-     *
-     * @param \Core\UserBundle\Entity\User $banque
-     */
-    public function removeBanque(\Core\UserBundle\Entity\User $banque)
-    {
-        $this->banque->removeElement($banque);
-    }
-
-    /**
-     * Get banque
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getBanque()
-    {
-        return $this->banque;
     }
 }
