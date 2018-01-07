@@ -1,16 +1,16 @@
 <?php
 
-namespace Core\UserBundle\Entity;
+namespace UserBundle\Entity;
 
-use App\BanqueBundle\Entity\Banque;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
+use BanqueBundle\Entity\Banque;
 
 /**
  * User
  *
  * @ORM\Table(name="user")
- * @ORM\Entity(repositoryClass="Core\UserBundle\Repository\UserRepository")
+ * @ORM\Entity(repositoryClass="UserBundle\Repository\UserRepository")
  */
 class User extends BaseUser
 {
@@ -43,7 +43,7 @@ class User extends BaseUser
     /**
      * @var Banque
      *
-     * @ORM\ManyToMany(targetEntity="\App\BanqueBundle\Entity\Banque")
+     * @ORM\ManyToMany(targetEntity="\BanqueBundle\Entity\Banque")
      * @ORM\JoinTable(name="user_banque",
      *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="banque_id", referencedColumnName="id")}
@@ -170,11 +170,11 @@ class User extends BaseUser
     /**
      * Add banque
      *
-     * @param \Core\UserBundle\Entity\User $banque
+     * @param \UserBundle\Entity\User $banque
      *
      * @return User
      */
-    public function addBanque(\Core\UserBundle\Entity\User $banque)
+    public function addBanque(\UserBundle\Entity\User $banque)
     {
         $this->banque[] = $banque;
 
@@ -184,9 +184,9 @@ class User extends BaseUser
     /**
      * Remove banque
      *
-     * @param \Core\UserBundle\Entity\User $banque
+     * @param \UserBundle\Entity\User $banque
      */
-    public function removeBanque(\Core\UserBundle\Entity\User $banque)
+    public function removeBanque(\UserBundle\Entity\User $banque)
     {
         $this->banque->removeElement($banque);
     }

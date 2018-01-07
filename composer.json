@@ -4,8 +4,8 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Core\\UserBundle\\": "src/Core/UserBundle",
-            "App\\BanqueBundle\\": "src/App/BanqueBundle"
+            "UserBundle\\": "src/UserBundle",
+            "BanqueBundle\\": "src/BanqueBundle"
         },
         "classmap": [
             "app/AppKernel.php",

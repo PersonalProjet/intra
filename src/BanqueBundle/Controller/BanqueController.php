@@ -1,9 +1,9 @@
 <?php
 
-namespace App\BanqueBundle\Controller;
+namespace BanqueBundle\Controller;
 
-use App\BanqueBundle\Entity\Banque;
-use App\BanqueBundle\Form\BanqueType;
+use BanqueBundle\Entity\Banque;
+use BanqueBundle\Form\BanqueType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;

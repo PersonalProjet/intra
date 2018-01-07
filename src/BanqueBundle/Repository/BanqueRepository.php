@@ -1,6 +1,6 @@
 <?php
 
-namespace App\BanqueBundle\Repository;
+namespace BanqueBundle\Repository;
 
 /**
  * UserRepository

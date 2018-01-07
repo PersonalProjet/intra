@@ -1,10 +1,11 @@
 <?php
 
-namespace Core\UserBundle\Security\Core;
+namespace UserBundle\Security\Core;
+
+use Symfony\Component\Security\Core\User\UserInterface;
 
 use HWI\Bundle\OAuthBundle\OAuth\Response\UserResponseInterface;
 use HWI\Bundle\OAuthBundle\Security\Core\User\FOSUBUserProvider;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Class User Provider

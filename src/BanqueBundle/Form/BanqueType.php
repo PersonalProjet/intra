@@ -1,8 +1,8 @@
 <?php
 
-namespace App\BanqueBundle\Form;
+namespace BanqueBundle\Form;
 
-use App\BanqueBundle\Entity\Banque;
+use BanqueBundle\Entity\Banque;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -32,6 +32,6 @@ class BanqueType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'app_banquebundle_banque';
+        return 'banquebundle_banque';
     }
 }

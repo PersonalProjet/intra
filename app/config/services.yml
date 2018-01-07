@@ -2,7 +2,7 @@ parameters:
 
 services:
     app.user.provider.fosuser:
-        class : Core\UserBundle\Security\Core\UserProvider
+        class : UserBundle\Security\Core\UserProvider
         arguments:
            - "@fos_user.user_manager"
            - { facebook: facebookID }

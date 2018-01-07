@@ -1,15 +1,11 @@
-app_banque_banque:
-    resource: "@AppBanqueBundle/Controller/BanqueController.php"
-    type:     annotation
-
 # Bundle Application
-core_user:
-    resource: "@CoreUserBundle/Controller/"
+user:
+    resource: "@UserBundle/Controller/"
     type:     annotation
     prefix:   /
 
-app_banque:
-    resource: "@AppBanqueBundle/Controller/"
+banque:
+    resource: "@BanqueBundle/Controller/"
     type:     annotation
     prefix:   /
 

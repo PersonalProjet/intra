@@ -22,8 +22,8 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
 
             // Bunlde,
-            new Core\UserBundle\CoreUserBundle(),
-            new App\BanqueBundle\AppBanqueBundle(),
+            new UserBundle\UserBundle(),
+            new BanqueBundle\BanqueBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

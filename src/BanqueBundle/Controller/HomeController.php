@@ -1,6 +1,6 @@
 <?php
 
-namespace App\BanqueBundle\Controller;
+namespace BanqueBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -12,6 +12,6 @@ class HomeController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('AppBanqueBundle:Home:index.html.twig');
+        return $this->render('home/index.html.twig');
     }
 }
